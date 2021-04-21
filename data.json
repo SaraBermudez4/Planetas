@@ -1,0 +1,74 @@
+﻿[
+    {
+        "nombre": "mercurio",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Mercury_Globe-MESSENGER_mosaic_centered_at_0degN-0degE.jpg/105px-Mercury_Globe-MESSENGER_mosaic_centered_at_0degN-0degE.jpg",
+        "distanciaSol": 57909175,
+        "distanciaTierra": "91,690,000",
+        "superficie": "75,000,000",
+        "masa": "3,302×1023"
+    },
+    {
+        "nombre": "venus",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Venus-real_color.jpg/105px-Venus-real_color.jpg",
+        "distanciaSol": 108208930,
+        "distanciaTierra": "42,000,000",
+        "superficie": "460,000,000",
+        "masa": "4,8690×1024"
+    },
+    {
+        "nombre": "elbicho",
+        "imagen": "https://yt3.ggpht.com/ytc/AAUvwngft30EJd_sVg4UzHUM6zHL8kT0uUVdPL1rZz1m=s900-c-k-c0x00ffffff-no-rj",
+        "distanciaSol": 3000000000,
+        "distanciaTierra": "31,000,000",
+        "superficie": "187",
+        "masa": "84"
+    },
+    {
+        "nombre": "tierra",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/As08-16-2593.jpg/105px-As08-16-2593.jpg",
+        "distanciaSol": 149597870,
+        "distanciaTierra": "0",
+        "superficie": "510,000,000",
+        "masa": "5,9742×1024"
+    },
+    {
+        "nombre": "marte",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/105px-OSIRIS_Mars_true_color.jpg",
+        "distanciaSol": 227936640,
+        "distanciaTierra": "69,000,000",
+        "superficie": "140,000,000",
+        "masa": "6,4191×1023"
+    },
+    {
+        "nombre": "jupiter",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jupiter_by_Cassini-Huygens.jpg/953px-Jupiter_by_Cassini-Huygens.jpg",
+        "distanciaSol": 778412010,
+        "distanciaTierra": "591,000,000",
+        "superficie": "64,000,000,000",
+        "masa": "1,8987×1027"
+    },
+    {
+        "nombre": "saturno",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/150px-Saturn_during_Equinox.jpg",
+        "distanciaSol": 1426725400,
+        "distanciaTierra": "1,200,000,000",
+        "superficie": "43,800,000,000",
+        "masa": "5,6851×1026"
+    },
+    {
+        "nombre": "urano",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Uranus.jpg/105px-Uranus.jpg",
+        "distanciaSol": 2870972200,
+        "distanciaTierra": "2,543,164,000",
+        "superficie": "8,130,000,000",
+        "masa": "8,6849×1025"
+    },
+    {
+        "nombre": "neptuno",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg/105px-Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg",
+        "distanciaSol": 4498252900,
+        "distanciaTierra": "4,500,000,000",
+        "superficie": "7,700,000,000",
+        "masa": "1,0244×1026"
+    }    
+]
