@@ -1,20 +1,14 @@
-var btn_ver = document.getElementById("btn_ver");
-btn_ver.addEventListener("click", traerdatos);
+var btn_ver = document.getElementById("btn_ver").addEventListener("click", traerdatos);
 
-var btn_menor = document.getElementById("btn_menor");
-btn_menor.addEventListener("click", datos_menor);
+var btn_menor = document.getElementById("btn_menor").addEventListener("click", datos_menor);
 
-var btn_mayor = document.getElementById("btn_mayor");
-btn_mayor.addEventListener("click", datos_mayor);
+var btn_mayor = document.getElementById("btn_mayor").addEventListener("click", datos_mayor);
 
-var btn_33 = document.getElementById("btn_33");
-btn_33.addEventListener("click", datos_33);
+var btn_33 = document.getElementById("btn_33").addEventListener("click", datos_33);
 
-var btn_nombre = document.getElementById("btn_nombre");
-btn_nombre.addEventListener("click", buscar_nombre);
+var btn_nombre = document.getElementById("btn_nombre").addEventListener("click", buscar_nombre);
 
-var btn_orden_nombre = document.getElementById("btn_orden_nombre");
-btn_orden_nombre.addEventListener("click", datos_nombre);
+var btn_orden_nombre = document.getElementById("btn_orden_nombre").addEventListener("click", datos_nombre);
 
 function crearJson() {
     const planetas = new XMLHttpRequest();
@@ -39,6 +33,7 @@ function verDatos(datos) {
     `
     }
 }
+
 
 function traerdatos() {
 
@@ -127,6 +122,7 @@ function datos_33() {
 function buscar_nombre() {
 
     var nombre = document.getElementById("txt_name").value;
+    nombre = nombre.toLocaleLowerCase();
     planetas = crearJson();
     planetas.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
