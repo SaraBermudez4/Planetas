@@ -70,5 +70,45 @@
         "distanciaTierra": "4,500,000,000",
         "superficie": "7,700,000,000",
         "masa": "1,0244×1026"
+    },
+    {
+        "nombre": "pluton",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/250px-Pluto_in_True_Color_-_High-Res.jpg",
+        "distanciaSol": 5906400000,
+        "distanciaTierra": "6,000,000,000",
+        "superficie": "17,000,000",
+        "masa": "1,25×1022"
+    },
+    {
+        "nombre": "haumea",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Haumea%2C_Celestia.jpg/280px-Haumea%2C_Celestia.jpg",
+        "distanciaSol": 52360000000,
+        "distanciaTierra": "5,108,320,000,000",
+        "superficie": "1,952,160",
+        "masa": "4,2x1021"
+    },
+    {
+        "nombre": "makemake",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Makemake_moon_Hubble_image_with_legend_%28cropped%29.jpg/280px-Makemake_moon_Hubble_image_with_legend_%28cropped%29.jpg",
+        "distanciaSol": 6850240000000,
+        "distanciaTierra": "5,610,000,000",
+        "superficie": "1,450,000",
+        "masa": "4x1021"
+    },
+    {
+        "nombre": "eris",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Eris_and_dysnomia2.jpg/280px-Eris_and_dysnomia2.jpg",
+        "distanciaSol": 52360000000000,
+        "distanciaTierra": "14,316,000,000",
+        "superficie": "2,372,000",
+        "masa": "3,75x1022"
+    },
+    {
+        "nombre": "ceres",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ceres_-_RC3_-_Haulani_Crater_%2822381131691%29.jpg/245px-Ceres_-_RC3_-_Haulani_Crater_%2822381131691%29.jpg",
+        "distanciaSol": 371446000000,
+        "distanciaTierra": "46,000,000,000",
+        "superficie": "2,850,000",
+        "masa": "9,43×1020"
     }    
 ]
