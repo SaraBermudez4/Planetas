@@ -1,4 +1,3 @@
-//document.querySelector("#boton").addEventListener('click', traerdatos());
 var btn_ver = document.getElementById("btn_ver");
 btn_ver.addEventListener("click", traerdatos);
 
@@ -17,130 +16,85 @@ btn_nombre.addEventListener("click", buscar_nombre);
 var btn_orden_nombre = document.getElementById("btn_orden_nombre");
 btn_orden_nombre.addEventListener("click", datos_nombre);
 
-function traerdatos() {
+function crearJson() {
     const planetas = new XMLHttpRequest();
     planetas.open('GET', 'data.json', true);
     planetas.send();
+    return planetas;
+}
 
+function verDatos(datos) {
+    let res = document.getElementById("res");
+    res.innerHTML = '';
+    for (let item of datos) {
+        res.innerHTML += `
+        <tr>
+        <td>${item.nombre}</td>
+        <td><img src=${item.imagen}></td>
+        <td>${item.distanciaSol}</td>
+        <td>${item.distanciaTierra}</td>
+        <td>${item.superficie}</td>
+        <td>${item.masa}</td>
+    </tr>
+    `
+    }
+}
+
+function traerdatos() {
+
+    planetas = crearJson();
     planetas.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const datos = JSON.parse(this.responseText);
-            let res = document.getElementById("res");
-            res.innerHTML = '';
-            for (let item of datos) {
-                res.innerHTML += `
-                <tr>
-                <td>${item.nombre}</td>
-                <td><img src=${item.imagen}></td>
-                <td>${item.distanciaSol}</td>
-                <td>${item.distanciaTierra}</td>
-                <td>${item.superficie}</td>
-                <td>${item.masa}</td>
-            </tr>
-            `
-            }
+            verDatos(datos);
         }
     }
 }
 
 function datos_nombre() {
 
-    const planetas = new XMLHttpRequest();
-    planetas.open('GET', 'data.json', true);
-    planetas.send();
-
+    planetas = crearJson();
     planetas.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const datos = JSON.parse(this.responseText);
             const ordenNombre = datos;
             ordenNombre.sort((a, b) => (a.nombre < b.nombre) ? -1 : 1);
-            //console.log(item);
-            let res = document.getElementById("res");
-            res.innerHTML = '';
-            for (let item of ordenNombre) {
-                res.innerHTML += `
-                    <tr>
-                    <td>${item.nombre}</td>
-                    <td><img src=${item.imagen}></td>
-                    <td>${item.distanciaSol}</td>
-                    <td>${item.distanciaTierra}</td>
-                    <td>${item.superficie}</td>
-                    <td>${item.masa}</td>
-                </tr>
-                `
-            }
+            verDatos(ordenNombre);
         }
     }
 }
 
 function datos_mayor() {
 
-    const planetas = new XMLHttpRequest();
-    planetas.open('GET', 'data.json', true);
-    planetas.send();
-
+    planetas = crearJson();
     planetas.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const datos = JSON.parse(this.responseText);
             const planetaMayor = datos;
             planetaMayor.sort((a, b) => a.distanciaSol - b.distanciaSol)
             planetaMayor.reverse();
-            for (let item of planetaMayor) {
-                //console.log(item);
-                let res = document.getElementById("res");
-                res.innerHTML = '';
-                for (let item of planetaMayor) {
-                    res.innerHTML += `
-                    <tr>
-                    <td>${item.nombre}</td>
-                    <td><img src=${item.imagen}></td>
-                    <td>${item.distanciaSol}</td>
-                    <td>${item.distanciaTierra}</td>
-                    <td>${item.superficie}</td>
-                    <td>${item.masa}</td>
-                </tr>
-                `
-                }
-            }
+            verDatos(planetaMayor);
         }
     }
 }
 
 function datos_menor() {
-    const planetas = new XMLHttpRequest();
-    planetas.open('GET', 'data.json', true);
-    planetas.send();
 
+    planetas = crearJson();
     planetas.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const datos = JSON.parse(this.responseText);
             const planetaMenor = datos;
             planetaMenor.sort((a, b) => a.distanciaSol - b.distanciaSol)
-            for (let item of planetaMenor) {
-                //console.log(item);
-                let res = document.getElementById("res");
-                res.innerHTML = '';
-                for (let item of planetaMenor) {
-                    res.innerHTML += `
-                    <tr>
-                    <td>${item.nombre}</td>
-                    <td><img src=${item.imagen}></td>
-                    <td>${item.distanciaSol}</td>
-                    <td>${item.distanciaTierra}</td>
-                    <td>${item.superficie}</td>
-                    <td>${item.masa}</td>
-                </tr>
-                `
-                }
-            }
+
+            verDatos(planetaMenor);
         }
     }
 }
-function datos_33() {
-    const planetas = new XMLHttpRequest();
-    planetas.open('GET', 'data.json', true);
-    planetas.send();
 
+function datos_33() {
+
+    planetas = crearJson();
     planetas.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const datos = JSON.parse(this.responseText);
@@ -172,11 +126,8 @@ function datos_33() {
 
 function buscar_nombre() {
 
-    const nombre = document.getElementById("txt_name").value;
-    const planetas = new XMLHttpRequest();
-    planetas.open('GET', 'data.json', true);
-    planetas.send();
-
+    var nombre = document.getElementById("txt_name").value;
+    planetas = crearJson();
     planetas.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const datos = JSON.parse(this.responseText);
